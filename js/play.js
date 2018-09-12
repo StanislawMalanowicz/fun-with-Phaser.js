@@ -3,6 +3,7 @@
 
      preload: function(){
         game.load.image('asset', 'assets/asset.png')
+        game.load.image('ball', 'assets/basketball.png')
     },
 
     create: function(){
@@ -11,7 +12,7 @@
         player.body.bounce.setTo(1,1);
         player.body.collideWorldBounds = true;
 
-        enemy = game.add.sprite(400, 300, 'asset')
+        enemy = game.add.sprite(400, 300, 'ball')
         game.physics.enable(enemy, Phaser.Physics.ARCADE)
         enemy.body.bounce.setTo(1,1);
         enemy.body.collideWorldBounds = true;
